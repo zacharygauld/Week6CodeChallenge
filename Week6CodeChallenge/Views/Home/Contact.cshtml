@@ -2,7 +2,7 @@
 
 <h1>Contact</h1>
 
-<form role="form" class="text-center" method="post" action="@Url.Action("Contact", "Home")">
+<form role="form" class="text-center ajax-form" method="post" data-posturl="@Url.Action("Contact", "Home")">
         <div class="form-group">
             @Html.LabelFor(model => model.FirstName, "First Name")
             @Html.EditorFor(model => model.FirstName)

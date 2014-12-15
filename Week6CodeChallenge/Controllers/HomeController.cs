@@ -40,10 +40,10 @@ namespace Week6CodeChallenge.Controllers
         [HttpPost]
         public ActionResult Contact(Models.W6ContactForm contactForm)
         {
-            //Models.ContactEntities db = new Models.ContactEntities();
-            //db.W6ContactForms.Add(contactForm);
-            //db.SaveChanges();
-            return RedirectToAction("ThankYou", "Home");
+            Models.ContactEntities db = new Models.ContactEntities();
+            db.W6ContactForms.Add(contactForm);
+            db.SaveChanges();
+            return RedirectToAction("ThankYou");
         }
 
         public ActionResult Who()
